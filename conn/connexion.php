@@ -86,26 +86,26 @@
 
                                 <h5 id="header-text" class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Se connecter</h5>
 
-                                <form id="login-form">
+                                <form id="login-form" method="POST">
                                     <div data-mdb-input-init class="form-outline mb-4">
                                         <label class="form-label" for="login-email">
                                             <i class="fas fa-envelope"></i> Adresse email
                                         </label>
-                                        <input type="email" id="login-email" class="form-control form-control-lg" required />
+                                        <input type="email" id="login-email" class="form-control form-control-lg" name="login" required />
                                     </div>
 
                                     <div data-mdb-input-init class="form-outline mb-4">
                                         <label class="form-label" for="login-password">
                                             <i class="fas fa-lock"></i> Mot de passe
                                         </label>
-                                        <input type="password" id="login-password" class="form-control form-control-lg" required />
+                                        <input type="password" id="login-password" class="form-control form-control-lg" name="password" required />
                                     </div>
 
                                     <div data-mdb-input-init class="form-outline mb-4">
                                         <label class="form-label" for="login-profile">
                                             <i class="fas fa-user"></i> Profil
                                         </label>
-                                        <select id="login-profile" class="form-control form-control-lg" required>
+                                        <select id="login-profile" class="form-control form-control-lg" name="choix" required>
                                             <option value="admin">Admin</option>
                                             <option value="user">Propriétaire</option>
                                             <option value="guest">Locataire</option>
@@ -113,7 +113,7 @@
                                     </div>
 
                                     <div class="pt-1 mb-4">
-                                        <button class="btn btn-dark btn-lg btn-block" type="button" onclick="login()">Se connecter</button>
+                                        <button class="btn btn-dark btn-lg btn-block" type="submit">Se connecter</button>
                                     </div>
 
                                     <a class="small text-muted" href="#!" style="color: rgb(9, 9, 9);">Mot de passe oublié ?</a>
@@ -122,46 +122,46 @@
                                     <a href="#!" class="small text-muted">Politique de confidentialité</a>
                                 </form>
 
-                                <form id="register-form" style="display:none;">
+                                <form id="register-form" style="display:none;" method="POST">
                                     <div data-mdb-input-init class="form-outline mb-4">
                                         <label class="form-label" for="register-firstname">
                                             <i class="fas fa-user"></i> Prénom
                                         </label>
-                                        <input type="text" id="register-firstname" class="form-control form-control-lg" required />
+                                        <input type="text" id="register-firstname" class="form-control form-control-lg" name="register_firstname" required />
                                     </div>
 
                                     <div data-mdb-input-init class="form-outline mb-4">
                                         <label class="form-label" for="register-lastname">
                                             <i class="fas fa-user"></i> Nom
                                         </label>
-                                        <input type="text" id="register-lastname" class="form-control form-control-lg" required />
+                                        <input type="text" id="register-lastname" class="form-control form-control-lg" name="register_lastname" required />
                                     </div>
 
                                     <div data-mdb-input-init class="form-outline mb-4">
                                         <label class="form-label" for="register-email">
                                             <i class="fas fa-envelope"></i> Adresse email
                                         </label>
-                                        <input type="email" id="register-email" class="form-control form-control-lg" required />
+                                        <input type="email" id="register-email" class="form-control form-control-lg" name="register_email" required />
                                     </div>
 
                                     <div data-mdb-input-init class="form-outline mb-4">
                                         <label class="form-label" for="register-phone">
                                             <i class="fas fa-phone"></i> Téléphone
                                         </label>
-                                        <input type="tel" id="register-phone" class="form-control form-control-lg" required />
+                                        <input type="tel" id="register-phone" class="form-control form-control-lg" name="register_phone" required />
                                     </div>
 
-                                    <input type="hidden" id="register-date" name="register-date">
+                                    <input type="hidden" id="register-date" name="register_date">
 
                                     <div data-mdb-input-init class="form-outline mb-4">
                                         <label class="form-label" for="register-password">
                                             <i class="fas fa-lock"></i> Mot de passe
                                         </label>
-                                        <input type="password" id="register-password" class="form-control form-control-lg" required />
+                                        <input type="password" id="register-password" class="form-control form-control-lg" name="register_password" required />
                                     </div>
 
                                     <div class="pt-1 mb-4">
-                                        <button class="btn btn-primary btn-lg btn-block" type="button" style="color: rgb(248, 248, 248);" onclick="register()">S'inscrire</button>
+                                        <button class="btn btn-primary btn-lg btn-block" type="submit" style="color: rgb(248, 248, 248);" onclick="setRegisterDate()">S'inscrire</button>
                                     </div>
 
                                     <p class="mb-5 pb-lg-2" style="color: #12883b;">Déjà un compte ? <a href="#!" style="color: #393f81;" onclick="toggleForm()">Se connecter ici</a></p>
@@ -183,7 +183,7 @@
         var loginForm = document.getElementById('login-form');
         var registerForm = document.getElementById('register-form');
         var headerText = document.getElementById('header-text');
-        
+
         if (loginForm.style.display === 'none') {
             loginForm.style.display = 'block';
             registerForm.style.display = 'none';
@@ -195,16 +195,9 @@
         }
     }
 
-    function login() {
-        // Implémentation de la connexion ici
-        alert('Connexion...');
-    }
-
-    function register() {
-        // Implémentation de l'inscription ici
+    function setRegisterDate() {
         var registerDateField = document.getElementById('register-date');
         registerDateField.value = new Date().toISOString();
-        alert('Inscription...');
     }
 </script>
 
