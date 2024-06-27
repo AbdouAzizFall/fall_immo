@@ -1,0 +1,594 @@
+ Le volume dans le lecteur C n'a pas de nom.
+ Le num‚ro de s‚rie du volume est 265E-6560
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier
+
+27/06/2024  13:31    <DIR>          .
+23/06/2024  12:22    <DIR>          ..
+23/06/2024  12:53                 0 .gitignore.txt
+26/06/2024  09:10    <DIR>          admin
+27/06/2024  13:31                 0 arborescence.txt
+26/06/2024  11:00    <DIR>          assets
+27/06/2024  09:48    <DIR>          conn
+26/06/2024  09:19    <DIR>          DB
+27/06/2024  09:53               388 index.php
+26/06/2024  09:04    <DIR>          layout
+27/06/2024  12:34    <DIR>          pages
+27/06/2024  12:34    <DIR>          profil
+27/06/2024  10:10    <DIR>          View
+               3 fichier(s)              388 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git
+
+27/06/2024  13:31    <DIR>          ..
+27/06/2024  10:12                18 COMMIT_EDITMSG
+27/06/2024  10:12               305 config
+23/06/2024  12:41                73 description
+23/06/2024  12:41    <DIR>          fsmonitor--daemon
+23/06/2024  13:08                21 HEAD
+23/06/2024  12:41    <DIR>          hooks
+27/06/2024  10:12             2ÿ737 index
+23/06/2024  12:41    <DIR>          info
+23/06/2024  12:43    <DIR>          logs
+27/06/2024  10:12    <DIR>          objects
+23/06/2024  13:10                46 packed-refs
+23/06/2024  12:44    <DIR>          refs
+               6 fichier(s)            3ÿ200 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\fsmonitor--daemon
+
+23/06/2024  12:41    <DIR>          .
+23/06/2024  12:41    <DIR>          cookies
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\fsmonitor--daemon\cookies
+
+27/06/2024  12:48    <DIR>          .
+23/06/2024  12:41    <DIR>          ..
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\hooks
+
+23/06/2024  12:41    <DIR>          .
+23/06/2024  12:41               478 applypatch-msg.sample
+23/06/2024  12:41               896 commit-msg.sample
+23/06/2024  12:41             4ÿ726 fsmonitor-watchman.sample
+23/06/2024  12:41               189 post-update.sample
+23/06/2024  12:41               424 pre-applypatch.sample
+23/06/2024  12:41             1ÿ643 pre-commit.sample
+23/06/2024  12:41               416 pre-merge-commit.sample
+23/06/2024  12:41             1ÿ374 pre-push.sample
+23/06/2024  12:41             4ÿ898 pre-rebase.sample
+23/06/2024  12:41               544 pre-receive.sample
+23/06/2024  12:41             1ÿ492 prepare-commit-msg.sample
+23/06/2024  12:41             2ÿ783 push-to-checkout.sample
+23/06/2024  12:41             2ÿ308 sendemail-validate.sample
+23/06/2024  12:41             3ÿ650 update.sample
+              14 fichier(s)           25ÿ821 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\info
+
+23/06/2024  12:41    <DIR>          .
+23/06/2024  12:41               240 exclude
+               1 fichier(s)              240 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\logs
+
+23/06/2024  12:43    <DIR>          .
+27/06/2024  10:12             1ÿ355 HEAD
+23/06/2024  13:08    <DIR>          refs
+               1 fichier(s)            1ÿ355 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\logs\refs
+
+23/06/2024  13:08    <DIR>          .
+23/06/2024  12:43    <DIR>          ..
+23/06/2024  13:08    <DIR>          heads
+23/06/2024  13:11    <DIR>          remotes
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\logs\refs\heads
+
+23/06/2024  13:08    <DIR>          .
+23/06/2024  13:08    <DIR>          ..
+27/06/2024  10:12             1ÿ165 main
+               1 fichier(s)            1ÿ165 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\logs\refs\remotes
+
+23/06/2024  13:11    <DIR>          .
+23/06/2024  13:08    <DIR>          ..
+23/06/2024  13:11    <DIR>          origin
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\logs\refs\remotes\origin
+
+23/06/2024  13:11    <DIR>          .
+23/06/2024  13:11    <DIR>          ..
+27/06/2024  10:12               760 main
+               1 fichier(s)              760 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects
+
+27/06/2024  10:12    <DIR>          .
+23/06/2024  13:05    <DIR>          09
+27/06/2024  09:59    <DIR>          0f
+23/06/2024  13:05    <DIR>          15
+27/06/2024  10:12    <DIR>          17
+26/06/2024  09:13    <DIR>          18
+27/06/2024  10:12    <DIR>          1a
+23/06/2024  13:05    <DIR>          2e
+23/06/2024  12:43    <DIR>          33
+23/06/2024  12:42    <DIR>          42
+23/06/2024  13:05    <DIR>          4b
+27/06/2024  09:59    <DIR>          50
+27/06/2024  09:59    <DIR>          53
+27/06/2024  09:59    <DIR>          56
+27/06/2024  09:58    <DIR>          57
+23/06/2024  12:43    <DIR>          5f
+27/06/2024  09:59    <DIR>          73
+26/06/2024  09:13    <DIR>          79
+23/06/2024  12:42    <DIR>          7a
+27/06/2024  09:58    <DIR>          7e
+26/06/2024  09:19    <DIR>          83
+27/06/2024  09:59    <DIR>          87
+27/06/2024  09:59    <DIR>          8a
+27/06/2024  09:58    <DIR>          8c
+23/06/2024  13:05    <DIR>          92
+23/06/2024  12:42    <DIR>          96
+26/06/2024  09:19    <DIR>          9c
+27/06/2024  09:58    <DIR>          ad
+26/06/2024  09:13    <DIR>          b0
+26/06/2024  09:19    <DIR>          b3
+23/06/2024  13:05    <DIR>          b6
+27/06/2024  10:12    <DIR>          be
+23/06/2024  13:05    <DIR>          bf
+26/06/2024  09:19    <DIR>          c3
+27/06/2024  09:58    <DIR>          c9
+27/06/2024  09:58    <DIR>          d5
+27/06/2024  09:58    <DIR>          d9
+23/06/2024  12:43    <DIR>          e3
+26/06/2024  09:13    <DIR>          e6
+23/06/2024  13:05    <DIR>          e8
+27/06/2024  09:59    <DIR>          ef
+27/06/2024  10:12    <DIR>          fa
+23/06/2024  12:41    <DIR>          info
+23/06/2024  12:41    <DIR>          pack
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\09
+
+23/06/2024  13:05    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+23/06/2024  13:05               167 79bb7735557ae5868930b97fccd9b8e8705d53
+               1 fichier(s)              167 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\0f
+
+27/06/2024  09:59    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+27/06/2024  09:59               170 8e192b18af797bd502184d6f9113bf56fb2986
+               1 fichier(s)              170 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\15
+
+23/06/2024  13:05    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+23/06/2024  13:05                54 40d65c9d4a5dabb75745f8b0a13baaf57e6ea8
+               1 fichier(s)               54 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\17
+
+27/06/2024  10:12    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+27/06/2024  10:12               294 7ca1a4329bf16eaa3f67638a8e476a41ce2c87
+               1 fichier(s)              294 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\18
+
+26/06/2024  09:13    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+26/06/2024  09:13               238 b9a38ea8acba2be70b879c0c10273de6fa433d
+               1 fichier(s)              238 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\1a
+
+27/06/2024  10:12    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+27/06/2024  10:12               105 444f8639afdc389c5532944485100d343f6d4d
+               1 fichier(s)              105 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\2e
+
+23/06/2024  13:05    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+23/06/2024  13:05                92 cccfc4786bbdb42cf8c085fbf31a129e562400
+               1 fichier(s)               92 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\33
+
+23/06/2024  12:43    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+23/06/2024  12:43               131 54d01d23174594ce4a1def13ad2b412b5236be
+               1 fichier(s)              131 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\42
+
+23/06/2024  12:42    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+23/06/2024  12:42               249 6543304ea07d30f5b83a38db7a000397e826f1
+               1 fichier(s)              249 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\4b
+
+23/06/2024  13:05    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+23/06/2024  13:05                71 910a87907858f91b04d06b7f49d635dbbb0f3a
+               1 fichier(s)               71 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\50
+
+27/06/2024  09:59    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+27/06/2024  09:59               107 052958d6959fcd9dfaeabda3daddccbecf8ac0
+               1 fichier(s)              107 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\53
+
+27/06/2024  09:59    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+27/06/2024  09:59               267 53d162aaba45d3643515115824b7884a7c7deb
+               1 fichier(s)              267 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\56
+
+27/06/2024  09:59    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+27/06/2024  09:59                92 6e226a44008c0d8a7f395302fd6dde0990ebe4
+               1 fichier(s)               92 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\57
+
+27/06/2024  09:58    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+27/06/2024  09:58               107 050312ce504e9e98d4134f9f718da570332f00
+               1 fichier(s)              107 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\5f
+
+23/06/2024  12:43    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+23/06/2024  12:43                86 82c00f5ae4477ca1e0dd45a6e26a57d66e1dba
+               1 fichier(s)               86 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\73
+
+27/06/2024  09:59    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+27/06/2024  09:59                72 68838dd679bd397528d569401cd174459305d6
+               1 fichier(s)               72 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\79
+
+26/06/2024  09:13    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+26/06/2024  09:13                94 ed45c8d61e1ff8da333bd10834020821817a64
+               1 fichier(s)               94 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\7a
+
+23/06/2024  12:42    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+23/06/2024  12:42               161 12160d6e6033ad55556ba9ced2a5a71aa1492d
+               1 fichier(s)              161 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\7e
+
+27/06/2024  09:58    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+27/06/2024  09:58            12ÿ546 fda4e056e0694f5d55e69db5ba0d8e4d183ecb
+               1 fichier(s)           12ÿ546 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\83
+
+26/06/2024  09:19    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+26/06/2024  09:19               169 66d34dfe62c5e7d72c441217781fb9a474782c
+               1 fichier(s)              169 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\87
+
+27/06/2024  09:59    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+27/06/2024  09:59                83 70bb868f02fb1eca37045f539d97b01a32d21f
+26/06/2024  09:13                64 ba949a0224618b2db5c7164c738cd37e0fc015
+               2 fichier(s)              147 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\8a
+
+27/06/2024  09:59    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+27/06/2024  09:59                57 3be40ec4f345dcb4d88d19d751d1e3fc7229ad
+               1 fichier(s)               57 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\8c
+
+27/06/2024  09:58    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+27/06/2024  09:58             2ÿ101 8f3c8f7245c108fc485a9ab16d0dcb054521b1
+               1 fichier(s)            2ÿ101 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\92
+
+23/06/2024  13:05    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+27/06/2024  09:58            31ÿ108 e3fe871295c44f8fa58ddc7ac242463f13e6bd
+               1 fichier(s)           31ÿ108 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\96
+
+23/06/2024  12:42    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+23/06/2024  12:42               170 a1d52ef4f0ccb2d71675df4684cef8ed5437d0
+               1 fichier(s)              170 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\9c
+
+26/06/2024  09:19    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+26/06/2024  09:19             1ÿ977 9b65b22d12eb8299ce5e854fab4e1b33b8f74b
+               1 fichier(s)            1ÿ977 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\ad
+
+27/06/2024  09:58    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+27/06/2024  09:58               224 13fc3c8e7e7977d2d4f25e05beedd439b5b2f0
+               1 fichier(s)              224 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\b0
+
+26/06/2024  09:13    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+26/06/2024  09:13               171 d358ee5325e5785ef9e785cae6eacefd411f49
+               1 fichier(s)              171 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\b3
+
+26/06/2024  09:19    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+26/06/2024  09:19               238 c43e8ee89f1d1746f3ea7b00c9e096439caed1
+               1 fichier(s)              238 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\b6
+
+23/06/2024  13:05    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+23/06/2024  13:05               262 4af1832707802154f78f99950d2988b9f0e453
+               1 fichier(s)              262 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\be
+
+27/06/2024  10:12    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+27/06/2024  10:12               170 60e10867f5de59347ad0b74e509c59fdc86ad6
+               1 fichier(s)              170 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\bf
+
+23/06/2024  13:05    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+23/06/2024  13:05                71 5d407fc6eaa7c2a72ef6bb763721860fcc7641
+               1 fichier(s)               71 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\c3
+
+26/06/2024  09:19    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+26/06/2024  09:19               129 0f7050c33bbc76db66b1c841dd685a0a209d08
+               1 fichier(s)              129 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\c9
+
+27/06/2024  09:58    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+27/06/2024  09:58               247 d9f31c63823d054fa2adfc226b5e85653a94b5
+               1 fichier(s)              247 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\d5
+
+27/06/2024  09:58    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+27/06/2024  09:58            86ÿ412 bb9d45a0992e0d64bf93515f8ec1badab28656
+               1 fichier(s)           86ÿ412 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\d9
+
+27/06/2024  09:58    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+27/06/2024  10:11               189 205ab0b929253dcd535adc59787751ed091a00
+26/06/2024  09:13                81 e85b7b712c26bf50e08af1e7956381315c49b9
+               2 fichier(s)              270 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\e3
+
+23/06/2024  12:43    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+23/06/2024  12:43                83 5dc6d3be0b24ce0b2fa9b9558e3cd9827ab76a
+               1 fichier(s)               83 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\e6
+
+26/06/2024  09:13    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+27/06/2024  10:11                15 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+26/06/2024  09:13                63 a4d676ec2daf110ac1731fe4279077ccf36b92
+               2 fichier(s)               78 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\e8
+
+23/06/2024  13:05    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+23/06/2024  13:05               152 d51beff7980edd6ad50c80cb7ef48947b68710
+               1 fichier(s)              152 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\ef
+
+27/06/2024  09:59    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+27/06/2024  09:59                81 6676a5a43ce0d02e78e758638a816fdcf3df99
+               1 fichier(s)               81 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\fa
+
+27/06/2024  10:12    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+27/06/2024  10:12                79 301d42fb178ec2e368656db5f9cf6e3b4de102
+               1 fichier(s)               79 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\info
+
+23/06/2024  12:41    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\objects\pack
+
+23/06/2024  12:41    <DIR>          .
+27/06/2024  10:12    <DIR>          ..
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\refs
+
+23/06/2024  12:44    <DIR>          .
+27/06/2024  10:12    <DIR>          heads
+23/06/2024  13:11    <DIR>          remotes
+23/06/2024  12:41    <DIR>          tags
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\refs\heads
+
+27/06/2024  10:12    <DIR>          .
+23/06/2024  12:44    <DIR>          ..
+27/06/2024  10:12                41 main
+               1 fichier(s)               41 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\refs\remotes
+
+23/06/2024  13:11    <DIR>          .
+23/06/2024  12:44    <DIR>          ..
+27/06/2024  10:12    <DIR>          origin
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\refs\remotes\origin
+
+27/06/2024  10:12    <DIR>          .
+23/06/2024  13:11    <DIR>          ..
+27/06/2024  10:12                41 main
+               1 fichier(s)               41 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\.git\refs\tags
+
+23/06/2024  12:41    <DIR>          .
+23/06/2024  12:44    <DIR>          ..
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\admin
+
+26/06/2024  09:10    <DIR>          .
+27/06/2024  13:31    <DIR>          ..
+26/06/2024  09:08                 0 ges_immeubles.php
+26/06/2024  09:08                 0 ges_locataires.php
+26/06/2024  09:09                 0 ges_locations.php
+26/06/2024  09:08                 0 ges_unites.php
+26/06/2024  09:10                 0 ges_users.php
+               5 fichier(s)                0 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\assets
+
+26/06/2024  11:00    <DIR>          .
+27/06/2024  13:31    <DIR>          ..
+26/06/2024  11:02    <DIR>          css
+27/06/2024  09:48    <DIR>          img
+26/06/2024  11:00    <DIR>          js
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\assets\css
+
+26/06/2024  11:02    <DIR>          .
+26/06/2024  11:00    <DIR>          ..
+10/10/2022  18:20           155ÿ764 bootstrap.min.css
+26/06/2024  11:02                 0 style.css
+               2 fichier(s)          155ÿ764 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\assets\img
+
+27/06/2024  09:48    <DIR>          .
+26/06/2024  11:00    <DIR>          ..
+26/06/2024  13:29            12ÿ546 logo.jpg
+09/04/2024  13:54            86ÿ636 moi.jpg
+               2 fichier(s)           99ÿ182 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\assets\js
+
+26/06/2024  11:00    <DIR>          .
+26/06/2024  11:00    <DIR>          ..
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\conn
+
+27/06/2024  09:48    <DIR>          .
+27/06/2024  13:31    <DIR>          ..
+27/06/2024  12:48             9ÿ233 connexion.php
+               1 fichier(s)            9ÿ233 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\DB
+
+26/06/2024  09:19    <DIR>          .
+27/06/2024  13:31    <DIR>          ..
+23/06/2024  12:38               219 config.php
+23/06/2024  12:40               306 connection.php
+26/06/2024  09:18             6ÿ713 db_immobilier.sql
+               3 fichier(s)            7ÿ238 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\layout
+
+26/06/2024  09:04    <DIR>          .
+27/06/2024  13:31    <DIR>          ..
+26/06/2024  09:26               118 footer.php
+26/06/2024  11:06               530 header.php
+               2 fichier(s)              648 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\pages
+
+27/06/2024  12:34    <DIR>          .
+27/06/2024  13:31    <DIR>          ..
+27/06/2024  10:11               254 immeubles.php
+27/06/2024  10:10               254 locations.php
+27/06/2024  10:05               254 unites.php
+               3 fichier(s)              762 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\profil
+
+27/06/2024  12:34    <DIR>          .
+27/06/2024  13:31    <DIR>          ..
+27/06/2024  10:05               254 admin.php
+27/06/2024  10:05               254 locatires.php
+27/06/2024  12:36               254 proprietaires.php
+               3 fichier(s)              762 octets
+
+ R‚pertoire de C:\xampp1\htdocs\fall_immobilier\View
+
+27/06/2024  10:10    <DIR>          .
+27/06/2024  13:31    <DIR>          ..
+27/06/2024  10:10                 0 tab_admin.php
+27/06/2024  10:08                 0 tab_immeubles.php
+27/06/2024  10:08                 0 tab_locataires.php
+27/06/2024  10:08                 0 tab_location.php
+27/06/2024  10:08                 0 tab_proprietaires.php
+27/06/2024  10:08                 0 tab_unite.php
+               6 fichier(s)                0 octets
+
+     Total des fichiers list‚sÿ:
+             100 fichier(s)          446ÿ099 octets
+             204 R‚p(s)  64ÿ038ÿ854ÿ656 octets libres
