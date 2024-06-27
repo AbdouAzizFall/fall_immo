@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -69,20 +72,20 @@
 
                                 <h5 id="header-text" class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Se connecter</h5>
 
-                                <form id="login-form">
+                                <form id="login-form" method="POST" >
                                     <div data-mdb-input-init class="form-outline mb-4">
                                         <label class="form-label" for="login-email">Adresse email</label>
-                                        <input type="email" id="login-email" class="form-control form-control-lg" required />
+                                        <input type="email"  class="form-control form-control-lg" required name ="login" id ="login" />
                                     </div>
 
                                     <div data-mdb-input-init class="form-outline mb-4">
                                         <label class="form-label" for="login-password">Mot de passe</label>
-                                        <input type="password" id="login-password" class="form-control form-control-lg" required />
+                                        <input type="password"  class="form-control form-control-lg" required  name ="password" id ="password" />
                                     </div>
 
                                     <div data-mdb-input-init class="form-outline mb-4">
                                         <label class="form-label" for="login-profile">Profil</label>
-                                        <select id="login-profile" class="form-control form-control-lg" required>
+                                        <select  class="form-control form-control-lg"  name ="choix" id ="choix" required >
                                             <option value="admin">Admin</option>
                                             <option value="user">Propriétaire</option>
                                             <option value="guest">Locataire</option>
@@ -90,7 +93,7 @@
                                     </div>
 
                                     <div class="pt-1 mb-4">
-                                        <button class="btn btn-dark btn-lg btn-block" type="button" onclick="login()">Se connecter</button>
+                                        <button class="btn btn-dark btn-lg btn-block" type="submit" onclick="login()">Se connecter</button>
                                     </div>
 
                                     <a class="small text-muted" href="#!" style="color: rgb(9, 9, 9);">Mot de passe oublié ?</a>
@@ -99,7 +102,7 @@
                                     <a href="#!" class="small text-muted">Politique de confidentialité</a>
                                 </form>
 
-                                <form id="register-form" style="display:none;">
+                                <form id="register-form" style="display:none;" >
                                    
 
                                     <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Créer un compte</h5>
@@ -141,6 +144,69 @@
         </div>
     </div>
 </section>
+
+<?php
+
+    if (isset($_POST['login'])) {
+        //  données du formulaire 
+        $email = $_POST['login'];
+        $password = $_POST['password'];
+        $profile = $_POST['choix'];
+
+        echo "<h1>Données de connexion :</h1>";
+        echo "<p>Email : $email</p>";
+        echo "<p>Mot de passe : $password</p>";
+        echo "<p>Profil : $profile</p>";
+        
+
+        // verification si il est admin
+        if ($profile  == "admin"){
+
+            require(__DIR__ . '/../DB/connection.php');
+            $sql = "select * from admin";
+            $admins = $db->query($sql)->fetchAll();
+            
+            foreach ($admins as $admin) {
+
+              
+             
+              if (( $admin['email'] ==   $_POST['login'] )  && ( $admin['mot_de_passe']   ==  $_POST['password'])){
+
+                echo "c'est bon";
+                break;
+            
+              }else{
+
+                echo "c'est pas bon";
+                
+                break;
+
+   
+              }
+   
+            }
+           
+        }
+
+
+
+
+    } elseif (isset($_POST['register_email'])) {
+        // Récupération des données du formulaire d'inscription
+        $firstname = $_POST['register_firstname'];
+        $lastname = $_POST['register_lastname'];
+        $email = $_POST['register_email'];
+        $password = $_POST['register_password'];
+
+        echo "<h1>Données d'inscription :</h1>";
+        echo "<p>Prénom : $firstname</p>";
+        echo "<p>Nom : $lastname</p>";
+        echo "<p>Email : $email</p>";
+        echo "<p>Mot de passe : $password</p>";
+    }
+
+?>
+
 
 <script>
     function toggleForm() {
