@@ -7,7 +7,6 @@
 </head>
 <body>
 <?php include "layout/header.php";
-
      ?>
 </body>
 </html>
