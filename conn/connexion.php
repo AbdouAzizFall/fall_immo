@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         .vh-100 {
-            min-height: 190vh;
+            min-height: 210vh;
         }
         .form-outline {
             position: relative;
@@ -86,19 +86,19 @@
 
                                 <h5 id="header-text" class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Se connecter</h5>
 
-                                <form id="login-form" method="POST">
+                                <form id="login-form" method="POST" action="">
                                     <div data-mdb-input-init class="form-outline mb-4">
-                                        <label class="form-label" for="login-email">
-                                            <i class="fas fa-envelope"></i> Adresse email
+                                        <label class="form-label" for="login-username">
+                                            <i class="fas fa-user"></i> Nom d'utilisateur
                                         </label>
-                                        <input type="email" id="login-email" class="form-control form-control-lg" name="login" required />
+                                        <input type="text" id="login-username" class="form-control form-control-lg" name="login" placeholder="Entrez votre nom d'utilisateur" required />
                                     </div>
 
                                     <div data-mdb-input-init class="form-outline mb-4">
                                         <label class="form-label" for="login-password">
                                             <i class="fas fa-lock"></i> Mot de passe
                                         </label>
-                                        <input type="password" id="login-password" class="form-control form-control-lg" name="password" required />
+                                        <input type="password" id="login-password" class="form-control form-control-lg" name="password" placeholder="Entrez votre mot de passe" required />
                                     </div>
 
                                     <div data-mdb-input-init class="form-outline mb-4">
@@ -115,14 +115,14 @@
                                     <div class="pt-1 mb-4">
                                         <button class="btn btn-dark btn-lg btn-block" type="submit">Se connecter</button>
                                     </div>
-
-                                    <a class="small text-muted" href="#!" style="color: rgb(9, 9, 9);">Mot de passe oublié ?</a>
-                                    <p class="mb-5 pb-lg-2" style="color: #e11e1e;">Pas de compte ? <a href="#!" style="color: #393f81;" onclick="toggleForm()">S'inscrire ici</a></p>
-                                    <a href="#!" class="small text-muted">Conditions d'utilisation.</a>
-                                    <a href="#!" class="small text-muted">Politique de confidentialité</a>
                                 </form>
 
-                                <form id="register-form" style="display:none;" method="POST">
+                                <a class="small text-muted" href="#!" style="color: rgb(9, 9, 9);">Mot de passe oublié ?</a>
+                                <p class="mb-5 pb-lg-2" style="color: #e11e1e;">Pas de compte ? <a href="#!" style="color: #393f81;" onclick="toggleForm()">S'inscrire ici</a></p>
+                                <a href="#!" class="small text-muted">Conditions d'utilisation.</a>
+                                <a href="#!" class="small text-muted">Politique de confidentialité</a>
+
+                                <form id="register-form" style="display:none;" method="POST" action="register.php">
                                     <div data-mdb-input-init class="form-outline mb-4">
                                         <label class="form-label" for="register-firstname">
                                             <i class="fas fa-user"></i> Prénom
@@ -178,29 +178,34 @@
     </div>
 </section>
 
+<?php
+// Inclure le fichier de connexion
+include 'DB/connection.php';
+
+?>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 <script>
     function toggleForm() {
-        var loginForm = document.getElementById('login-form');
-        var registerForm = document.getElementById('register-form');
-        var headerText = document.getElementById('header-text');
-
-        if (loginForm.style.display === 'none') {
-            loginForm.style.display = 'block';
-            registerForm.style.display = 'none';
-            headerText.innerHTML = 'Se connecter';
+        var loginForm = document.getElementById("login-form");
+        var registerForm = document.getElementById("register-form");
+        if (loginForm.style.display === "none") {
+            loginForm.style.display = "block";
+            registerForm.style.display = "none";
         } else {
-            loginForm.style.display = 'none';
-            registerForm.style.display = 'block';
-            headerText.innerHTML = 'Créer un compte Locataire';
+            loginForm.style.display = "none";
+            registerForm.style.display = "block";
         }
     }
 
     function setRegisterDate() {
-        var registerDateField = document.getElementById('register-date');
-        registerDateField.value = new Date().toISOString();
+        var dateInput = document.getElementById("register-date");
+        var currentDate = new Date();
+        dateInput.value = currentDate.toISOString().split('T')[0];
     }
 </script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

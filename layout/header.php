@@ -7,6 +7,7 @@
         <a class="nav-item nav-link" href="?page=listProduit">Gestion des locations</a>
         <a class="nav-item nav-link" href="?page=listCommande">Gestion des locataires</a>
         <a class="nav-item nav-link" href="?page=listCommande">Gestion des unites</a>
+        <a class="nav-item nav-link" href="?page=listCommande">Gestion des proprietaires</a>
 
     </div>
 </nav>
