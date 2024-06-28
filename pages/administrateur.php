@@ -6,9 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-<?php
-include "pages/proprietaires.php";
-include "layout/footer.php";
-     ?>
+    <?php 
+        include "View/tab_admin.php";   
+    ?>
 </body>
 </html>

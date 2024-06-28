@@ -6,6 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include "layout/header.php" ?>
+    <?php include "layout/header.php"; 
+    include "layout/header.php";
+    include "pages/administrateur.php.php";
+    include "layout/footer.php";
+    ?>
+
 </body>
 </html>

@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-<?php include "layout/header.php";
+<?php include "layout/footer.php";
      ?>
 </body>
 </html>
