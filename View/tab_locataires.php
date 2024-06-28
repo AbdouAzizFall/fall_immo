@@ -44,11 +44,11 @@
                     <td><?php echo $locataire['email']?></td>
                     <td><?php echo $locataire['telephone']?></td>
                     <td><?php echo $locataire['date_inscription']?></td>
-                    <td><?php echo $locataire['password']?></td>
+                    <td><?php echo $locataire['pass']?></td>
 
 
                     <td>
-                          <a class="btn btn-primary" href="modif_i.php?id=<?php echo $locataire['id_locataire']; ?>">modifier</a>
+                          <a class="btn btn-primary" href="modif_l.php?id=<?php echo $locataire['id_locataire']; ?>">modifier</a>
                           <a class="btn btn-danger" href="tab_locataires.php?action=delete&id=<?php echo $locataire['id_locataire']; ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce locataire ?')">supprimer</a>
 
                           
