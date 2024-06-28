@@ -16,9 +16,9 @@
         <?php
             require( '../layout/header.php');
         ?>
-        <br>
-        <br>
-        <h3 class="display-6">gestion immeubles</h3>
+     
+    <div class="container">
+        <h3 class="display-6">Liste des administrateurs</h3>
         <hr>
         <table class="table">
             <thead>
@@ -69,6 +69,8 @@
             </tbody>
         </table>
         <a class="btn btn-success" href="ajout_i.php">ajouter un immeuble</a>
+</div>
+   
 
     
  

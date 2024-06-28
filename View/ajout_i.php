@@ -10,8 +10,10 @@
             require( '../layout/header.php');
         ?>
      
+     <div class="container mt-4">
+
                             
-                            <h1 class="display-3"> Ajout immeubles</h1>
+                        <h1 class="display-3"> Ajout immeubles</h1>
                         <form action="" method="POST" class="w-50"> 
 
                             <div class="form-group">
@@ -58,5 +60,7 @@
         
         ?>
         
-</body>
+
+    </div>
+    </body>
 </html>

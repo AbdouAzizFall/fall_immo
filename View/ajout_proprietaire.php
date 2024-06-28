@@ -1,64 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajouter un propriétaire</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
-<body>
-    <?php
-    require('../layout/header.php'); // Inclure l'en-tête commun
-    require('../DB/connection.php'); // Inclure le fichier de connexion à la base de données
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Récupérer les données du formulaire
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['pass'])) {
         $nom = $_POST['nom'];
         $prenom = $_POST['prenom'];
         $email = $_POST['email'];
-        $immeubles = $_POST['immeubles'];
+        $nbr = $_POST['nbr_imm'];
+        $pass = $_POST['pass'];
 
-        // Requête d'insertion SQL
-        $sql = "INSERT INTO proprietaires (nom_pro, prenom_pro, email_pro, immeubles) VALUES (?, ?, ?, ?)";
+        require('../DB/connection.php');
+        $sql = "INSERT INTO proprietaire (id, nom , prenom, email, pass , nbr_immeuble ) VALUES (NULL, ?, ?, ? ,?,?)";
 
         try {
-            // Préparation de la requête
-            $stmt = $db->prepare($sql);
-
-            // Exécution de la requête avec les valeurs
-            $stmt->execute([$nom, $prenom, $email, $immeubles]);
-
-            echo '<div class="container mt-4"><div class="alert alert-success" role="alert">Propriétaire ajouté avec succès.</div></div>';
+            $prepare = $db->prepare($sql);
+            $prepare->execute([$nom, $prenom,$email, $pass,$nbr]);
+            echo "Enregistrement ajouté avec succès.";
         } catch (PDOException $e) {
-            echo '<div class="container mt-4"><div class="alert alert-danger" role="alert">Erreur lors de l\'ajout du propriétaire : ' . $e->getMessage() . '</div></div>';
+            echo "Erreur lors de l'ajout de l'enregistrement : " . $e->getMessage();
         }
     }
-    ?>
+}
+?>
 
-    <div class="container mt-4">
-        <h1 class="display-3">Ajouter un propriétaire</h1>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Ajout de Propriétaires</title>
+</head>
+<body>
+    <?php
+        require('../layout/header.php');
+    ?>
+    <div class="container mt-5">
+        <h1 class="display-4">Ajout de Propriétaires</h1>
         <form action="" method="POST" class="w-50">
-            <div class="form-group">
-                <label for="nom">Nom</label>
-                <input type="text" class="form-control" id="nom" name="nom" required>
+            <div class="form-group mb-3">
+                <label for="nom"><h5>Nom</h5></label>
+                <input class="form-control" type="text" name="nom" id="nom" required />
             </div>
-            <div class="form-group">
-                <label for="prenom">Prénom</label>
-                <input type="text" class="form-control" id="prenom" name="prenom" required>
+            <div class="form-group mb-3">
+                <label for="prenom"><h5>Prénom</h5></label>
+                <input class="form-control" type="text" name="prenom" id="prenom" required />
             </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" name="email" required>
+            <div class="form-group mb-3">
+                <label for="prenom"><h5>email</h5></label>
+                <input class="form-control" type="email" name="email" id="email" required />
             </div>
-            <div class="form-group">
-                <label for="immeubles">Nombre d'immeubles</label>
-                <input type="number" class="form-control" id="immeubles" name="immeubles" required>
+            <div class="form-group mb-3">
+                <label for="prenom"><h5>nombre d'immeuble</h5></label>
+                <input class="form-control" type="number" name="nbr_imm" id="nbr_imm" required />
             </div>
-            <button type="submit" class="btn btn-success">Ajouter</button>
-            <a href="tab_proprietaires.php" class="btn btn-secondary">Annuler</a>
+            <div class="form-group mb-3">
+                <label for="pass"><h5>Mot de passe</h5></label>
+                <input class="form-control" type="password" name="pass" id="pass" required />
+            </div>
+            <button class="btn btn-success" type="submit">Ajouter</button>
+            <button class="btn btn-light" type="reset">Annuler</button>
         </form>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-VoPFvGrZstsltdPjWzuYL6+UZF4bK2KmA0pAURWun1mz76f4o+szs0c5w+8jM2ue" crossorigin="anonymous"></script>
 </body>
 </html>

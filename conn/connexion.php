@@ -1,3 +1,63 @@
+<?php
+   require_once __DIR__ . '/../DB/connection.php'; 
+   if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login']) && isset($_POST['password']) )    {
+       $login = $_POST['login'];
+       $pass = $_POST['password'];
+       $fonction = $_POST['choix'];
+      
+       if( $fonction == "admin"){
+           $sql = "select * from admin ";
+           $admins = $db->query($sql)->fetchAll();
+           foreach ($admins as $admin) {
+           
+               if($login == $admin['email'] && $pass == $admin['mot_de_passe']){
+
+                header("Location: View/tab_admin.php");
+                exit;
+                   break;
+               }else{
+                   echo "c'est pas bon ad";
+                   break;
+               }
+           }
+       }elseif( $fonction == "locataire"){
+           $sql = "select * from locataire ";
+           $locs = $db->query($sql)->fetchAll();
+           foreach ($locs as $loc) {
+           
+               if($login == $loc['email'] && $pass == $loc['pass']){
+
+                   header("Location: View/tab_locataires.php");
+                   exit;
+                   
+                  
+               }else{
+                   echo "c'est pas bon loc";
+                   break;
+               }
+
+       }
+
+   }elseif( $fonction == "proprietaire"){
+       $sql = "select * from proprietaire ";
+       $pros = $db->query($sql)->fetchAll();
+       foreach ($pros as $pro) {
+       
+           if($login == $pro['email'] && $pass == $pro['pass']){
+
+            header("Location: View/tab_proprietaires.php");
+            exit;
+           }else{
+               echo "c'est pas bon pro";
+               break;
+           }
+
+   }
+}
+                   
+                       
+                   
+   }?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -9,7 +69,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         .vh-100 {
-            min-height: 210vh;
+            min-height: 190vh;
         }
         .form-outline {
             position: relative;
@@ -86,19 +146,19 @@
 
                                 <h5 id="header-text" class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Se connecter</h5>
 
-                                <form id="login-form" method="POST" action="">
+                                <form id="login-form" method="POST">
                                     <div data-mdb-input-init class="form-outline mb-4">
-                                        <label class="form-label" for="login-username">
-                                            <i class="fas fa-user"></i> Nom d'utilisateur
+                                        <label class="form-label" for="login-email">
+                                            <i class="fas fa-envelope"></i> Adresse email
                                         </label>
-                                        <input type="text" id="login-username" class="form-control form-control-lg" name="login" placeholder="Entrez votre nom d'utilisateur" required />
+                                        <input type="email" id="login-email" class="form-control form-control-lg" name="login" required />
                                     </div>
 
                                     <div data-mdb-input-init class="form-outline mb-4">
                                         <label class="form-label" for="login-password">
                                             <i class="fas fa-lock"></i> Mot de passe
                                         </label>
-                                        <input type="password" id="login-password" class="form-control form-control-lg" name="password" placeholder="Entrez votre mot de passe" required />
+                                        <input type="password" id="login-password" class="form-control form-control-lg" name="password" required />
                                     </div>
 
                                     <div data-mdb-input-init class="form-outline mb-4">
@@ -107,22 +167,22 @@
                                         </label>
                                         <select id="login-profile" class="form-control form-control-lg" name="choix" required>
                                             <option value="admin">Admin</option>
-                                            <option value="user">Propriétaire</option>
-                                            <option value="guest">Locataire</option>
+                                            <option value="proprietaire">Propriétaire</option>
+                                            <option value="locataire">Locataire</option>
                                         </select>
                                     </div>
 
                                     <div class="pt-1 mb-4">
                                         <button class="btn btn-dark btn-lg btn-block" type="submit">Se connecter</button>
                                     </div>
+
+                                    <a class="small text-muted" href="#!" style="color: rgb(9, 9, 9);">Mot de passe oublié ?</a>
+                                    <p class="mb-5 pb-lg-2" style="color: #e11e1e;">Pas de compte ? <a href="#!" style="color: #393f81;" onclick="toggleForm()">S'inscrire ici</a></p>
+                                    <a href="#!" class="small text-muted">Conditions d'utilisation.</a>
+                                    <a href="#!" class="small text-muted">Politique de confidentialité</a>
                                 </form>
 
-                                <a class="small text-muted" href="#!" style="color: rgb(9, 9, 9);">Mot de passe oublié ?</a>
-                                <p class="mb-5 pb-lg-2" style="color: #e11e1e;">Pas de compte ? <a href="#!" style="color: #393f81;" onclick="toggleForm()">S'inscrire ici</a></p>
-                                <a href="#!" class="small text-muted">Conditions d'utilisation.</a>
-                                <a href="#!" class="small text-muted">Politique de confidentialité</a>
-
-                                <form id="register-form" style="display:none;" method="POST" action="register.php">
+                                <form id="register-form" style="display:none;" method="POST">
                                     <div data-mdb-input-init class="form-outline mb-4">
                                         <label class="form-label" for="register-firstname">
                                             <i class="fas fa-user"></i> Prénom
@@ -139,10 +199,18 @@
 
                                     <div data-mdb-input-init class="form-outline mb-4">
                                         <label class="form-label" for="register-email">
-                                            <i class="fas fa-envelope"></i> Adresse email
+                                        <i class="fas fa-map-marker-alt"></i> Adresse 
                                         </label>
-                                        <input type="email" id="register-email" class="form-control form-control-lg" name="register_email" required />
+                                        <input type="text" id="register-adress" class="form-control form-control-lg" name="register_adress" required />
                                     </div>
+
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <label class="form-label" for="register-email">
+                                            <i class="fas fa-envelope"></i> email
+                                        </label>
+                                        <input type="text" id="register-email" class="form-control form-control-lg" name="register_email" required />
+                                    </div>
+
 
                                     <div data-mdb-input-init class="form-outline mb-4">
                                         <label class="form-label" for="register-phone">
@@ -168,7 +236,42 @@
                                     <a href="#!" class="small text-muted">Conditions d'utilisation.</a>
                                     <a href="#!" class="small text-muted">Politique de confidentialité</a>
                                 </form>
+                                <?php
+                              
 
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register_firstname'])) {
+    // Récupérer les données du formulaire
+    $firstname = $_POST['register_firstname'];
+    $lastname = $_POST['register_lastname'];
+    $address = $_POST['register_adress'];
+    $email = $_POST['register_email'];
+    $phone = $_POST['register_phone'];
+    $password = $_POST['register_password'];
+    $register_date = date("Y-m-d H:i:s"); // Récupérer la date actuelle
+
+    // Préparer la requête d'insertion
+    $sql = "INSERT INTO locataire (nom, prenom, adresse, email, telephone, date_inscription, pass) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    $stmt = $db->prepare($sql);
+
+ 
+
+    try {
+        // Exécuter la requête avec les valeurs
+        $stmt->execute([$lastname, $firstname, $address, $email, $phone, $register_date, $password]);
+        echo "Inscription réussie.";
+      
+        exit;
+    } catch (PDOException $e) {
+        echo "Erreur lors de l'inscription : " . $e->getMessage();
+    }
+} 
+
+
+                                ?> 
+
+    
                             </div>
                         </div>
                     </div>
@@ -178,28 +281,29 @@
     </div>
 </section>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="assets/js/script.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 <script>
     function toggleForm() {
-        var loginForm = document.getElementById("login-form");
-        var registerForm = document.getElementById("register-form");
-        if (loginForm.style.display === "none") {
-            loginForm.style.display = "block";
-            registerForm.style.display = "none";
+        var loginForm = document.getElementById('login-form');
+        var registerForm = document.getElementById('register-form');
+        var headerText = document.getElementById('header-text');
+
+        if (loginForm.style.display === 'none') {
+            loginForm.style.display = 'block';
+            registerForm.style.display = 'none';
+            headerText.innerHTML = 'Se connecter';
         } else {
-            loginForm.style.display = "none";
-            registerForm.style.display = "block";
+            loginForm.style.display = 'none';
+            registerForm.style.display = 'block';
+            headerText.innerHTML = 'Créer un compte Locataire';
         }
     }
 
     function setRegisterDate() {
-        var dateInput = document.getElementById("register-date");
-        var currentDate = new Date();
-        dateInput.value = currentDate.toISOString().split('T')[0];
+        var registerDateField = document.getElementById('register-date');
+        registerDateField.value = new Date().toISOString();
     }
 </script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
