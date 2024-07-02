@@ -1,4 +1,7 @@
 <?php
+  require('../DB/connection.php');
+  $sql = "select * from immeubles";
+  $immeubles = $db->query($sql)->fetchAll();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['pass'])) {
         $nom = $_POST['nom'];
@@ -8,11 +11,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $pass = $_POST['pass'];
 
         require('../DB/connection.php');
-        $sql = "INSERT INTO proprietaire (id, nom , prenom, email, pass , nbr_immeuble ) VALUES (NULL, ?, ?, ? ,?,?)";
+        $sql = "INSERT INTO proprietaires (id_proprietaire, nom_pro , prenom_pro, email_pro,immeuble, mot_de_passe  ) VALUES (NULL, ?, ?, ? ,?,?)";
 
         try {
             $prepare = $db->prepare($sql);
-            $prepare->execute([$nom, $prenom,$email, $pass,$nbr]);
+            $prepare->execute([$nom, $prenom,$email, $nbr,$pass]);
             echo "Enregistrement ajouté avec succès.";
         } catch (PDOException $e) {
             echo "Erreur lors de l'ajout de l'enregistrement : " . $e->getMessage();
@@ -49,9 +52,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input class="form-control" type="email" name="email" id="email" required />
             </div>
             <div class="form-group mb-3">
-                <label for="prenom"><h5>nombre d'immeuble</h5></label>
-                <input class="form-control" type="number" name="nbr_imm" id="nbr_imm" required />
-            </div>
+                <label for="prenom"><h5>immeuble</h5></label>
+                <select name="nbr_imm" id="">
+                <?php foreach ($immeubles as $immeuble) {?>
+                    <option value="<?php echo $immeuble['lib_i'] ?>"> <?php echo $immeuble['lib_i'] ?></option>
+              <?php  } ?>
+                </select>
+            </div>
             <div class="form-group mb-3">
                 <label for="pass"><h5>Mot de passe</h5></label>
                 <input class="form-control" type="password" name="pass" id="pass" required />

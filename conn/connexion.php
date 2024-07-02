@@ -25,27 +25,23 @@
            $locs = $db->query($sql)->fetchAll();
            foreach ($locs as $loc) {
            
-               if($login == $loc['email'] && $pass == $loc['pass']){
+               if($login == $loc['email'] && $pass == $loc['mot_de_passe']){
 
-                   header("Location: View/tab_locataires.php");
+                   header("Location: profil/locataires.php");
                    exit;
-                   
-                  
-               }else{
-                   echo "c'est pas bon loc";
-                   break;
+                                     
                }
 
        }
 
    }elseif( $fonction == "proprietaire"){
-       $sql = "select * from proprietaire ";
+       $sql = "select * from proprietaires ";
        $pros = $db->query($sql)->fetchAll();
        foreach ($pros as $pro) {
        
-           if($login == $pro['email'] && $pass == $pro['pass']){
+           if($login == $pro['email_pro'] && $pass == $pro['mot_de_passe']){
 
-            header("Location: View/tab_proprietaires.php");
+            header("Location: pages/proprietaires.php");
             exit;
            }else{
                echo "c'est pas bon pro";
@@ -252,7 +248,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register_firstname']))
     $register_date = date("Y-m-d H:i:s"); // Récupérer la date actuelle
 
     // Préparer la requête d'insertion
-    $sql = "INSERT INTO locataire (nom, prenom, adresse, email, telephone, date_inscription, pass) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO locataire (nom, prenom, adresse, email, telephone, date_inscription, mot_de_passe) VALUES (?, ?, ?, ?, ?, ?, ?)";
     $stmt = $db->prepare($sql);
 
  

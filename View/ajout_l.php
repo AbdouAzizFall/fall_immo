@@ -11,7 +11,7 @@
         ?>
      
                             
-                            <h1 class="display-3"> Ajout immeubles</h1>
+                            <h1 class="display-3"> Ajout locataire</h1>
                         <form action="" method="POST" class="w-50"> 
 
                             <div class="form-group">
@@ -44,6 +44,7 @@
             $telephone = $_POST['tel'];
             $date =  date("Y-m-d");
             $password = $_POST['pass'];
+            var_dump($password);
 
 
 
@@ -52,14 +53,14 @@
             
   
                 require('../DB/connection.php');
-                $sql = "INSERT INTO locataire ( id_locataire, nom, prenom, adresse, email , telephone , date_inscription , pass ) VALUES (NULL, ?, ?, ?, ?, ?, ?, ?);";
+                $sql = "INSERT INTO locataire ( id_locataire, nom, prenom, adresse, email , telephone , date_inscription , mot_de_passe ) VALUES (NULL, ?, ?, ?, ?, ?, ?, ?);";
   
                 try {
                   // Préparation de la requête
                   $prepare =$db->prepare($sql);
       
                   // Exécution de la requête avec les valeurs
-                  $prepare->execute([$nom , $prenom , $adresses , $email , $telephone , $date , $password]);
+                  $prepare->execute([$nom , $prenom , $adresses , $email , $telephone , $date , $_POST['pass']]);
       
                   echo "Enregistrement ajouté avec succès.";
               } catch (PDOException $e) {

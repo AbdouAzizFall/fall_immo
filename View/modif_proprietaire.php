@@ -1,12 +1,15 @@
 <?php
 require('../layout/header.php');
-require('../DB/connection.php');
+
+  require('../DB/connection.php');
+  $sql = "select * from immeubles";
+  $immeubles = $db->query($sql)->fetchAll();
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
     // Récupérer les données 
-    $sql = "SELECT * FROM proprietaire WHERE id = ?";
+    $sql = "SELECT * FROM proprietaires WHERE id_proprietaire = ?";
     $stmt = $db->prepare($sql);
     $stmt->execute([$id]);
     $proprietaire = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -22,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    $nbr = $_POST['nbr_imm'];
    
 
-    $sql = "UPDATE proprietaire SET nom = ?, prenom = ?, email = ?, pass = ?,nbr_immeuble =? WHERE id = ?";
+    $sql = "UPDATE proprietaires SET nom_pro = ?, prenom_pro = ?, email_pro = ?, mot_de_passe = ?,immeuble =? WHERE id_proprietaire = ?";
     $stmt = $db->prepare($sql);
     $stmt->execute([$nom, $prenom,$email, $pass,$nbr, $id]);
 
@@ -44,27 +47,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <form action="" method="POST" class="w-50">
         <div class="form-group mb-3">
                 <label for="id"><h5>ID</h5></label>
-                <input class="form-control" type="text" name="id" id="id" value="<?php echo $proprietaire['id']; ?>" readonly />
+                <input class="form-control" type="text" name="id" id="id" value="<?php echo $proprietaire['id_proprietaire']; ?>" readonly />
             </div>
         <div class="form-group mb-3">
                 <label for="nom"><h5>Nom</h5></label>
-                <input class="form-control" type="text" name="nom" id="nom"  value="<?php echo $proprietaire['nom']; ?>" required />
+                <input class="form-control" type="text" name="nom" id="nom"  value="<?php echo $proprietaire['nom_pro']; ?>" required />
             </div>
             <div class="form-group mb-3">
                 <label for="prenom"><h5>Prénom</h5></label>
-                <input class="form-control" type="text" name="prenom" id="prenom"  value="<?php echo $proprietaire['prenom']; ?>" required />
+                <input class="form-control" type="text" name="prenom" id="prenom"  value="<?php echo $proprietaire['prenom_pro']; ?>" required />
             </div>
             <div class="form-group mb-3">
                 <label for="prenom"><h5>email</h5></label>
-                <input class="form-control" type="email" name="email" id="email"  value="<?php echo $proprietaire['email']; ?>" required />
+                <input class="form-control" type="email" name="email" id="email"  value="<?php echo $proprietaire['email_pro']; ?>" required />
             </div>
             <div class="form-group mb-3">
-                <label for="prenom"><h5>nombre d'immeuble</h5></label>
-                <input class="form-control" type="number" name="nbr_imm" id="nbr_imm"  value="<?php echo $proprietaire['nbr_immeuble']; ?>" required />
-            </div>
+                <label for="prenom"><h5>Immeuble</h5></label>
+                <select name="nbr_imm" id="">
+                <?php foreach ($immeubles as $immeuble) {?>
+                    <option value="<?php echo $immeuble['lib_i'] ?>"> <?php echo $immeuble['lib_i'] ?></option>
+              <?php  } ?>
+                </select>            </div>
             <div class="form-group mb-3">
                 <label for="pass"><h5>Mot de passe</h5></label>
-                <input class="form-control" type="password" name="pass" id="pass" value="<?php echo $proprietaire['pass']; ?>" required />
+                <input class="form-control" type="password" name="pass" id="pass" value="<?php echo $proprietaire['mot_de_passe']; ?>" required />
             </div>
             <button class="btn btn-success" type="submit">Terminer</button>
             <button class="btn btn-light" type="reset">Annuler</button>

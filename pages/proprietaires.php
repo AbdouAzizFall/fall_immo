@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php 
-        include "View/tab_proprietaires.php";   
+        include "../View/tab_proprietaires.php";   
     ?>
 </body>
 </html>

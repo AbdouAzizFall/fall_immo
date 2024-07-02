@@ -91,11 +91,9 @@ h1 {
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a href="#" class="navbar-brand">FALL IMMOBILIER</a>
     <div class="navbar-nav">
-        <a class="nav-item nav-link" href="tab_proprietaires.php">Gestion des proprietaires</a>
+    <a class="nav-item nav-link" href="tab_immeubles.php">Gestion des immeubles</a>
         <a class="nav-item nav-link" href="tab_locataires.php">Gestion des locataires</a>
-        <a class="nav-item nav-link" href="../View/tab_location.php">Gestion des locations</a>
-        <a class="nav-item nav-link" href="tab_immeubles.php">Gestion des immeubles</a>
-        <a class="nav-item nav-link" href="tab_admin.php">Gestion des administrateurs</a>
+        <a class="nav-item nav-link" href="?page=listCommande">Gestion des locations</a>
 
     </div>
 </nav>

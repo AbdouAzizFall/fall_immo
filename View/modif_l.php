@@ -52,7 +52,7 @@
                     <label ><h4>date</h4></label>
                     <input class="form-control" type="text" name="date" id="date"  value="<?php echo $locataire['date_inscription']; ?>" readonly/>
                     <label ><h4>password</h4></label>
-                    <input class="form-control" type="password" name="pass" id="pass"  value="<?php echo $locataire['pass']; ?>"/>
+                    <input class="form-control" type="password" name="pass" id="pass"  value="<?php echo $locataire['mot_de_passe']; ?>"/>
                     
                 </div>
                 <br/>
@@ -71,7 +71,7 @@
                     $password = $_POST['pass'];
             
             
-                    $sql = "UPDATE locataire SET nom = ?, prenom = ?, adresse = ?, email = ?, telephone = ?,date_inscription = ?, pass= ? WHERE id_locataire = ?";
+                    $sql = "UPDATE locataire SET nom = ?, prenom = ?, adresse = ?, email = ?, telephone = ?,date_inscription = ?, mot_de_passe= ? WHERE id_locataire = ?";
                     $stmt = $db->prepare($sql);
                     $stmt->execute([$nom, $prenom,  $adresse ,  $email ,$telephone ,$date,$password,$id]);
             

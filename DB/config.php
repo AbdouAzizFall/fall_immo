@@ -5,4 +5,5 @@ define('USER', 'root');
 define('PASSWORD', '');
 define('DATABASE', 'db_immobilier');
 define('PORT', 3306);
+
 ?>

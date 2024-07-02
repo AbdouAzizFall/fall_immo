@@ -44,7 +44,7 @@
                             <td><?php echo $locataire['email']?></td>
                             <td><?php echo $locataire['telephone']?></td>
                             <td><?php echo $locataire['date_inscription']?></td>
-                            <td><?php echo $locataire['pass']?></td>
+                            <td><?php echo $locataire['mot_de_passe']?></td>
 
 
                             <td>
